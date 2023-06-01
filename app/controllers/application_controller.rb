@@ -1,7 +1,5 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
-  @@classv = "!@!#"
-  API_KEY= "QNADNIUABCIUC"
   # Add your routes here
   get "/" do
     { message: "Good luck with your project!" }.to_json
@@ -67,8 +65,21 @@ class ApplicationController < Sinatra::Base
 
   # Show route for a single category
   get '/categories/:id' do
+    # Find the category by ID
     category = Category.find(params[:id])
-    category.to_json
+  
+    # Retrieve all associated todos
+    todos = category.todos
+  
+    # Construct the nested JSON data
+    category_with_todos = {
+      id: category.id,
+      name: category.name,
+      todos: todos.map { |todo| { id: todo.id, name: todo.name, description: todo.description} }
+    }
+  
+    # Convert the data to JSON and return the response
+    category_with_todos.to_json
   end
 
   # Create route for categories
