@@ -55,7 +55,12 @@ Stay on top of your tasks by tracking their status. Whether it's "To-Do," "In Pr
 
 ## Need Help?
 
-If you have any questions, feedback, or need assistance, feel free to reach out. We are here to ensure your experience with the Todo List Manager is seamless and productive.
+If you have any questions, feedback, or need assistance, feel free to reach out. I am here to ensure your experience with the Todo List Manager is seamless and productive.
+
+
+
+
+
 
 Happy task management!
 
